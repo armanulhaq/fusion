@@ -2,6 +2,9 @@
     flex: 1;
     min-height: 100vh;
     padding-bottom: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     background-color: #f6f5f5;
 }
@@ -13,6 +16,7 @@
     font-size: 22px;
     padding: 20px;
     color: #585858;
+    width: 100%;
 }
 
 .nav p {
@@ -42,26 +46,42 @@
     -webkit-text-fill-color: transparent; /*makes text color transparent to show the gradient */
 }
 
-.main .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 15px;
-    padding: 20px;
+.main-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
 }
 
-.main .card {
-    height: 200px;
-    padding: 15px;
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
     background-color: #ebeaff;
-    border-radius: 10px;
-    position: relative;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.search-box img {
+    width: 24px;
     cursor: pointer;
 }
 
-.main .card img {
-    width: 25px;
-    padding: 5x;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+.search-box input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.main .bottom-info {
+    font-size: 11px;
+    margin: 15px;
+    text-align: center;
+    font-weight: 300;
 }
