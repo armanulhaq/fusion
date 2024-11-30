@@ -1,6 +1,6 @@
 .main {
     flex: 1;
-    min-height: 75vh;
+    min-height: 75dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +10,7 @@
 
 .mainContainer {
     max-width: 900px;
-    max-height: 75vh;
+    max-height: 75dvh;
 }
 
 .response {
@@ -23,7 +23,7 @@
     border-radius: 14px;
     padding: 50px;
     max-width: 900px; /* More reasonable max-width */
-    max-height: 72vh;
+    max-height: 72dvh;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #ebeaff;
 }

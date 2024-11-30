@@ -1,6 +1,6 @@
 .main {
     flex: 1;
-    min-height: 75vh;
+    min-height: 75dvh;
     display: flex;
     flex-direction: column;
     position: relative;
