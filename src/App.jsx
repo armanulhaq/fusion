@@ -5,19 +5,23 @@ import Input from "./components/Input/Input";
 import Response from "./components/Main/Response";
 import Nav from "./components/Nav/Nav";
 import { useState } from "react";
-
+// App.jsx
 function App() {
+    const [queries, setQueries] = useState([]); // Array to store all queries
+    const [currentQuery, setCurrentQuery] = useState(""); // Current input query
+    const [submittedQuery, setSubmittedQuery] = useState(""); // Last submitted query
+
     function handleSubmit() {
-        setSubmittedQuery(query);
-        setQuery("");
+        if (currentQuery.trim()) {
+            setSubmittedQuery(currentQuery);
+            setQueries((prev) => [...prev, currentQuery]);
+            setCurrentQuery(""); // Clear input after submission
+        }
     }
 
-    const [query, setQuery] = useState("");
-    const [submittedQuery, setSubmittedQuery] = useState("");
     return (
         <>
-            <Sidebar />
-
+            <Sidebar queries={queries} />
             <div className="main-app-container">
                 <Nav />
                 {submittedQuery === "" ? (
@@ -25,10 +29,9 @@ function App() {
                 ) : (
                     <Response query={submittedQuery} />
                 )}
-
                 <Input
-                    setQuery={setQuery}
-                    query={query}
+                    query={currentQuery}
+                    setQuery={setCurrentQuery}
                     onSubmit={handleSubmit}
                 />
             </div>

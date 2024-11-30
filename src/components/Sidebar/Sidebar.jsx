@@ -1,13 +1,13 @@
 import "./sidebar.css";
 import { assets } from "../../assets/assets";
 import { useState } from "react";
-const Sidebar = () => {
+const Sidebar = ({ queries }) => {
     const [isCollapsed, setisCollapsed] = useState(false);
     return (
         <div className="sidebar">
             <div className="top">
                 <img
-                    onClick={() => setisCollapsed((previous) => !previous)}
+                    onClick={() => setisCollapsed((prev) => !prev)}
                     className="menu"
                     src={assets.menu_icon}
                     alt=""
@@ -18,16 +18,22 @@ const Sidebar = () => {
                         src={assets.plus_icon}
                         alt=""
                     />
-                    {isCollapsed ? <p>New Chat</p> : null}
+                    {isCollapsed && <p>New Chat</p>}
                 </div>
-                {isCollapsed ? (
+                {isCollapsed && (
                     <div className="recent">
                         <p className="recent-title">Recent</p>
-                        <div className="recent-entry">
-                            <p>What is react ...</p>
-                        </div>
+                        {queries.map((query, index) => (
+                            <div key={index} className="recent-entry">
+                                <p>
+                                    {query.length > 25
+                                        ? `${query.substring(0, 25)}...`
+                                        : query}
+                                </p>
+                            </div>
+                        ))}
                     </div>
-                ) : null}
+                )}
             </div>
             <div className="bottom">
                 <div className="bottom-item recent-entry">

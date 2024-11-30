@@ -11,13 +11,13 @@
     width: 20px;
 }
 
-.sidebar .menu {
+.menu {
     display: block;
     margin-left: 10px;
     cursor: pointer;
 }
 
-.sidebar .new-chat {
+.new-chat {
     margin-top: 50px;
     display: inline-flex;
     align-items: center;
@@ -30,39 +30,51 @@
     cursor: pointer;
 }
 
-.sidebar .recent {
+/* Recent Section */
+.recent {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    max-height: calc(100vh - 300px);
+    overflow-y: auto;
 }
 
-.sidebar .recent-title {
-    margin-top: 30px;
+.recent-title {
     margin-bottom: 20px;
 }
 
-.sidebar .recent-entry {
+.recent-entry {
     display: flex;
-    align-items: start;
+    align-items: center;
     gap: 10px;
+    padding: 8px 16px;
     padding-right: 40px;
     border-radius: 50px;
-    padding: 8px 16px;
     color: #666;
+    cursor: pointer;
+    word-break: break-word;
     transition: all 0.3s ease;
 }
 
-.sidebar .recent-entry:hover {
+.recent-entry:hover {
     background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
     color: white;
     box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
 }
 
-.sidebar .bottom {
+.recent-entry p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Bottom Section */
+.bottom {
     display: flex;
     flex-direction: column;
 }
 
-.sidebar .bottom-item {
+.bottom-item {
     padding-right: 10px;
 }
 

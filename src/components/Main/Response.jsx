@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import styles from "./response.module.css";
 import ReactMarkdown from "react-markdown";
+import { assets } from "../../assets/assets";
 
 const Response = ({ query }) => {
     const [response, setResponse] = useState("");
@@ -45,18 +46,30 @@ const Response = ({ query }) => {
         <>
             <div className={styles.main}>
                 <div className={styles.mainContainer}>
-                    {loading && (
-                        <p className={styles.loading}>
-                            Hang tight! <br /> We are negotiating with the
-                            server gods.
-                        </p>
-                    )}
-                    {error && <p>{error}</p>}
-                    {response && (
-                        <ReactMarkdown className={styles.response}>
-                            {response}
-                        </ReactMarkdown>
-                    )}
+                    <div className={styles.querySection}>
+                        <img src={assets.user_icon} alt="" />
+                        <p>{query}</p>
+                    </div>
+                    <div className={styles.responseSection}>
+                        <img src="/favicon.png" alt="" />
+                        <div className={styles.content}>
+                            {loading && (
+                                <p className={styles.loading}>
+                                    <hr />
+                                    <hr />
+                                    <hr />
+                                </p>
+                            )}
+                            {error && <p>{error}</p>}
+                            {response && (
+                                <ReactMarkdown
+                                    className={styles.responseContainer}
+                                >
+                                    {response}
+                                </ReactMarkdown>
+                            )}
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
