@@ -67,7 +67,7 @@
         max-height: calc(80dvh - 40px);
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
         margin: 10px;
-        padding: 20px;
+        padding: 20px 40px;
     }
 
     .mainContainer {
