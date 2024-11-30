@@ -1,0 +1,85 @@
+.main {
+    flex: 1;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #f6f5f5;
+}
+
+.mainContainer {
+    max-width: 900px;
+    max-height: 75vh;
+}
+
+.response {
+    display: block;
+    border-radius: 14px;
+    padding: 50px;
+    overflow-y: auto; /* Allow vertical scrolling */
+    width: 90%; /* Adjust response width */
+    margin: 0;
+    border-radius: 14px;
+    padding: 50px;
+    max-width: 900px; /* More reasonable max-width */
+    max-height: 72vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ebeaff;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Slightly larger padding */
+    background: linear-gradient(
+        90deg,
+        #f9f9f9,
+        #e6e6e6,
+        #f9f9f9
+    ); /* Subtle gradient */
+    background-size: 200% 100%; /* For animation effect */
+    animation: shimmer 1.5s infinite; /* Gradient animation */
+    color: #555; /* Muted text color */
+    font-style: italic; /* Minimalistic italicized text */
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    overflow: hidden; /* Ensures corners are visible */
+    position: relative;
+}
+
+/* Animation for shimmering effect */
+@keyframes shimmer {
+    from {
+        background-position: 200% 0;
+    }
+    to {
+        background-position: -200% 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .response {
+        width: 100%;
+        max-height: calc(80dvh - 40px);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .actualResponseContainer {
+        width: 100%;
+        max-height: 80dvh;
+        align-items: flex-start; /* Align items at the start */
+        display: flex;
+        justify-content: center;
+        transition: width 0.3s ease;
+        border-radius: 15px;
+        height: auto;
+        padding: 0px;
+        overflow: auto;
+    }
+}

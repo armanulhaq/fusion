@@ -10,4 +10,5 @@
 #root {
     min-height: 100vh;
     display: flex;
+    min-width: 100vw;
 }
