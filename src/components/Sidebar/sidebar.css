@@ -4,7 +4,15 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: #ebeaff;
-    padding: 25px 15px;
+    padding: 10px 10px;
+    width: 80px; /* Default collapsed width */
+    transition: width 0.3s ease;
+}
+
+/* When expanded */
+.sidebar:has(.recent) {
+    width: 250px; /* Fixed expanded width */
+    padding: 10px 25px;
 }
 
 .sidebar img {
@@ -13,8 +21,9 @@
 
 .menu {
     display: block;
-    margin-left: 10px;
     cursor: pointer;
+    width: 24px; /* Increased from 20px */
+    height: 24px; /* Added to maintain aspect ratio */
 }
 
 .new-chat {
