@@ -8,6 +8,7 @@ A conversational AI application built using React.js and powered by the Gemini A
 - 📱 Responsive design for all devices
 - 🔄 Chat history tracking
 - 📂 Collapsible sidebar
+- 🛡️ Designed with a focus on security with the usage of .env
 
 ## Demo
 <img width="1710" alt="image" src="https://github.com/user-attachments/assets/a450852c-37f7-401d-a793-8c29484dfb40">
@@ -58,3 +59,8 @@ git commit -m "Added a new feature"
 git push origin feature-name
 ```
 4. Submit a pull request.
+
+## Acknowledgments
+- Gemini API for providing the AI capabilities.
+- React.js for making frontend development seamless and enjoyable.
+
