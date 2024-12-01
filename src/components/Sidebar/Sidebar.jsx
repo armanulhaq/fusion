@@ -36,17 +36,55 @@ const Sidebar = ({ queries }) => {
                 )}
             </div>
             <div className="bottom">
-                <div className="bottom-item recent-entry">
-                    <img src={assets.question_icon} alt="" />
-                    {isCollapsed ? <p>Help</p> : null}
+                <div className="bottom-item">
+                    <a
+                        href="https://github.com/armanulhaq"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <img src={assets.github} alt="" />
+                    </a>
+                    <a
+                        href="https://github.com/armanulhaq"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        {isCollapsed ? <p>Github</p> : null}
+                    </a>
                 </div>
-                <div className="bottom-item recent-entry">
-                    <img src={assets.history_icon} alt="" />
-                    {isCollapsed ? <p>Activities</p> : null}
+
+                <div className="bottom-item">
+                    <a
+                        href="https://www.linkedin.com/in/armanulhaq/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <img src={assets.linkedin} alt="" />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/armanulhaq/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        {isCollapsed ? <p>Linkedin</p> : null}
+                    </a>
                 </div>
-                <div className="bottom-item recent-entry">
-                    <img src={assets.setting_icon} alt="" />
-                    {isCollapsed ? <p>Settings</p> : null}
+
+                <div className="bottom-item">
+                    <a
+                        href="https://iamarman.vercel.app/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <img src={assets.portfolio} alt="" />
+                    </a>
+                    <a
+                        href="https://iamarman.vercel.app/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        {isCollapsed ? <p>Portfolio</p> : null}
+                    </a>
                 </div>
             </div>
         </div>

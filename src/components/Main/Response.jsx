@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import styles from "./response.module.css";
+import "./response.css";
 import ReactMarkdown from "react-markdown";
 import { assets } from "../../assets/assets";
 
@@ -9,11 +9,10 @@ const Response = ({ query }) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
 
-    // Function to handle API submission
     const handleSubmit = async () => {
         setLoading(true);
-        setResponse(""); // Clear previous response
-        setError(""); // Clear previous error
+        setResponse("");
+        setError("");
 
         try {
             const res = await axios({
@@ -44,17 +43,17 @@ const Response = ({ query }) => {
 
     return (
         <>
-            <div className={styles.main}>
-                <div className={styles.mainContainer}>
-                    <div className={styles.querySection}>
+            <div className="main">
+                <div className="mainContainer">
+                    <div className="querySection">
                         <img src={assets.user_icon} alt="" />
                         <p>{query}</p>
                     </div>
-                    <div className={styles.responseSection}>
+                    <div className="responseSection">
                         <img src="/favicon.png" alt="" />
-                        <div className={styles.content}>
+                        <div className="content">
                             {loading && (
-                                <p className={styles.loading}>
+                                <p className="loading">
                                     <hr />
                                     <hr />
                                     <hr />
@@ -62,9 +61,7 @@ const Response = ({ query }) => {
                             )}
                             {error && <p>{error}</p>}
                             {response && (
-                                <ReactMarkdown
-                                    className={styles.responseContainer}
-                                >
+                                <ReactMarkdown className="responseContainer">
                                     {response}
                                 </ReactMarkdown>
                             )}

@@ -12,6 +12,9 @@ import youtube_icon from "./youtube_icon.png";
 import code_icon from "./code_icon.png";
 import send_icon from "./send_icon.png";
 import gemini_icon from "./gemini_icon.png";
+import github from "./github.png";
+import linkedin from "./linkedin.png";
+import portfolio from "./portfolio.png";
 
 export const assets = {
     history_icon,
@@ -28,4 +31,7 @@ export const assets = {
     code_icon,
     send_icon,
     gemini_icon,
+    github,
+    linkedin,
+    portfolio,
 };
