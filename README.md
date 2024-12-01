@@ -12,7 +12,7 @@ A conversational AI application built using React.js and powered by the Gemini A
 ## Demo
 <img width="1710" alt="image" src="https://github.com/user-attachments/assets/a450852c-37f7-401d-a793-8c29484dfb40">
 
-##Tech Stack
+## Tech Stack
 Frontend: React.js
 API: Gemini API
 Tooling: Vite
