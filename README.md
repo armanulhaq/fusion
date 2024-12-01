@@ -2,14 +2,14 @@
 
 A conversational AI application built using React.js and powered by the Gemini API. This project provides an interactive chat interface where users can communicate with an AI model seamlessly. Inspired by advanced AI systems, this app is designed to be intuitive, responsive, and efficient.
 
-##✨ Features
-🤖 Real-time AI responses using Gemini API
-🎨 Modern and intuitive user interface
-📱 Responsive design for all devices
-🔄 Chat history tracking
-📂 Collapsible sidebar
+## ✨ Features
+- 🤖 Real-time AI responses using Gemini API
+- 🎨 Modern and intuitive user interface
+- 📱 Responsive design for all devices
+- 🔄 Chat history tracking
+- 📂 Collapsible sidebar
 
-##Demo
+## Demo
 <img width="1710" alt="image" src="https://github.com/user-attachments/assets/a450852c-37f7-401d-a793-8c29484dfb40">
 
 ##Tech Stack
@@ -18,7 +18,7 @@ API: Gemini API
 Tooling: Vite
 Hosting: Vercel
 
-##Installation
+## Installation
 1. Clone the repository:
 ```bash
 git clone https://github.com/your-username/fusion.git  
@@ -38,13 +38,13 @@ npm run dev
 ```
 5. Open http://localhost:5173 to view the app in your browser.
 
-##Usage
+## Usage
 Enter your message in the input box and click the send button to interact with the AI.
 The AI will respond in real-time using the Gemini API.
 
-##Contributing
+## Contributing
 We welcome contributions to improve the app. Here's how you can contribute:
-###Fork the repository.
+### Fork the repository.
 1. Create a new branch for your feature:
 ```bash
 git checkout -b feature-name
