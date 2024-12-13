@@ -16,7 +16,7 @@ const Response = ({ query }) => {
 
         try {
             const res = await axios({
-                url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyBXxSbY_sP1pXYx16GXH1Br75XRtte5lDI",
+                url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyCK0_voaYEgr_gphnETBVSj_7b-kjrsFm4",
                 method: "post",
                 data: {
                     contents: [{ parts: [{ text: query }] }],
